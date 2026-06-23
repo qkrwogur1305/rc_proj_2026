@@ -5,77 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>박재혁의 프로필</title>
     <style>
-        /* 1. 기본 스타일 세팅 */
+        /* 기본 스타일 및 배경 */
         body {
-            background: linear-gradient(135deg, #1f4068, #162447); /* 모빌리티 느낌의 다크블루 그라데이션 배경 */
+            background: linear-gradient(135deg, #0f172a, #1e293b); /* 세련된 다크 미드나잇 블루 배경 */
             font-family: 'Malgun Gothic', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 40px 20px;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            color: #ffffff;
+            color: #f8fafc;
         }
 
-        /* 2. 프로필 카드 박스 */
+        /* 메인 프로필 카드 */
         .profile-card {
-            background-color: rgba(26, 26, 46, 0.9); /* 반투명한 네이비 박스 */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
+            background-color: #1e293b; /* 메인 카드 색상 */
+            border: 1px solid #334155;
+            border-radius: 24px;
             padding: 40px;
-            width: 400px;
+            width: 100%;
+            max-width: 500px;
             text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(10px); /* 배경 흐림 효과로 고급스럽게 */
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
         }
 
-        /* 3. 장식용 포인트 아바타 (이름 이니셜) */
+        /* 이니셜 아바타 */
         .avatar {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #0072ff, #00c6ff); /* 테크 느낌의 하늘색 그라데이션 */
+            width: 85px;
+            height: 85px;
+            background: linear-gradient(45deg, #38bdf8, #0369a1); /* 테크 블루 그라데이션 */
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: bold;
             margin: 0 auto 20px auto;
-            box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
         }
 
-        /* 4. 텍스트 스타일링 */
         h1 {
-            font-size: 2rem;
-            margin: 10px 0;
-            color: #ffffff;
+            font-size: 2.2rem;
+            margin: 10px 0 5px 0;
+            letter-spacing: -0.5px;
         }
 
         .tag {
-            background-color: #e43f5a; /* 포인트 컬러 (레드 핑크) */
-            color: white;
-            padding: 5px 15px;
+            background-color: #38bdf8; /* 트렌디한 스카이블루 포인트 */
+            color: #0f172a;
+            padding: 6px 16px;
             border-radius: 50px;
             font-size: 0.85rem;
             font-weight: bold;
             display: inline-block;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
+        /* 소속 및 정보 섹션 */
         .info-section {
             text-align: left;
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
+            background-color: #0f172a;
+            padding: 24px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            border: 1px solid #1e293b;
         }
 
         .info-item {
             margin-bottom: 12px;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             display: flex;
-            align-items: center;
         }
 
         .info-item:last-child {
@@ -83,50 +83,119 @@
         }
 
         .label {
-            color: #00c6ff; /* 강조색 */
+            color: #38bdf8;
             font-weight: bold;
-            width: 90px;
-            display: inline-block;
+            width: 60px;
+            flex-shrink: 0;
         }
 
-        /* 5. 하단 응원 문구 */
-        .footer-text {
-            color: #8a99ad;
+        .value {
+            color: #e2e8f0;
+        }
+
+        /* 수강 과목 섹션 */
+        .subjects-section {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: #94a3b8;
+            margin-bottom: 12px;
+            font-weight: bold;
+            padding-left: 4px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2열로 정렬 */
+            gap: 10px;
+        }
+
+        .subject-badge {
+            background-color: #1e293b;
+            border: 1px solid #475569;
+            color: #f1f5f9;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
             font-size: 0.9rem;
-            line-height: 1.5;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        /* 마우스를 올렸을 때의 효과 */
+        .subject-badge:hover {
+            border-color: #38bdf8;
+            background-color: rgba(56, 189, 248, 0.05);
+            transform: translateY(-2px);
+        }
+
+        /* 학과 홈페이지 버튼 */
+        .link-button {
+            display: block;
+            background: linear-gradient(90deg, #0284c7, #0369a1);
+            color: white;
+            text-decoration: none;
+            padding: 14px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+        }
+
+        .link-button:hover {
+            background: linear-gradient(90deg, #38bdf8, #0284c7);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.5);
+            transform: translateY(-1px);
         }
     </style>
 </head>
 <body>
 
     <div class="profile-card">
-        <!-- 상단 이니셜 아바타 -->
+        <!-- 아바타 -->
         <div class="avatar">JH</div>
         
-        <!-- 이름 및 태그 -->
+        <!-- 이름 및 슬로건 -->
         <h1>박재혁</h1>
         <span class="tag">Future Mobility Engineer</span>
         
-        <!-- 내 정보 상세 박스 -->
+        <!-- 학과 정보 -->
         <div class="info-section">
             <div class="info-item">
                 <span class="label">소속</span>
-                <span>공주대학교</span>
+                <span class="value">공주대학교 (KNU)</span>
             </div>
             <div class="info-item">
                 <span class="label">학과</span>
-                <span>지능형모빌리티공학과</span>
+                <span class="value">지능형모빌리티공학과</span>
             </div>
             <div class="info-item">
                 <span class="label">학년</span>
-                <span>3학년 (재학 중)</span>
+                <span class="value">3학년 재학 중</span>
             </div>
         </div>
-        <!-- 하단 메시지 -->
-        <p class="footer-text">
-            미래 모빌리티 기술을 연구하고 <br>
-            코딩하는 웹 페이지 공간입니다. 🚀
-        </p>
+
+        <!-- 지난 학기 이수 과목 -->
+        <div class="subjects-section">
+            <div class="section-title">📂 지난 학기 이수 과목</div>
+            <div class="subjects-grid">
+                <div class="subject-badge">차량동역학</div>
+                <div class="subject-badge">회로이론</div>
+                <div class="subject-badge">자율주행제어시스템</div>
+                <div class="subject-badge">모빌리티제어공학</div>
+                <div class="subject-badge">모빌리티역학</div>
+                <div class="subject-badge">UAM공학개론</div>
+            </div>
+        </div>
+
+        <!-- 학과 홈페이지 링크 버튼 -->
+        <a href="https://mobility.kongju.ac.kr/" target="_blank" class="link-button">
+            공주대 지능형모빌리티공학과 홈페이지 🌐
+        </a>
     </div>
 
 </body>
