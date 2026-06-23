@@ -2,47 +2,131 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>나의 첫 페이지</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박재혁의 프로필</title>
     <style>
-        /* 1. 전체 배경과 글꼴 꾸미기 */
+        /* 1. 기본 스타일 세팅 */
         body {
-            background-color: #f4f7f6; /* 부드러운 연회색 배경 */
-            font-family: 'Malgun Gothic', sans-serif; /* 깔끔한 글꼴 */
+            background: linear-gradient(135deg, #1f4068, #162447); /* 모빌리티 느낌의 다크블루 그라데이션 배경 */
+            font-family: 'Malgun Gothic', sans-serif;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            color: #ffffff;
         }
 
-        /* 2. 박스 스타일 만들기 */
-        .card {
-            background-color: white;
+        /* 2. 프로필 카드 박스 */
+        .profile-card {
+            background-color: rgba(26, 26, 46, 0.9); /* 반투명한 네이비 박스 */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
             padding: 40px;
-            border-radius: 12px; /* 모서리 둥글게 */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 은은한 그림자 */
+            width: 400px;
             text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px); /* 배경 흐림 효과로 고급스럽게 */
         }
 
-        /* 3. 제목(h1) 꾸미기 */
+        /* 3. 장식용 포인트 아바타 (이름 이니셜) */
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #0072ff, #00c6ff); /* 테크 느낌의 하늘색 그라데이션 */
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 0 20px rgba(0, 198, 255, 0.5);
+        }
+
+        /* 4. 텍스트 스타일링 */
         h1 {
-            color: #333333;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2rem;
+            margin: 10px 0;
+            color: #ffffff;
         }
 
-        /* 4. 본문(p) 꾸미기 */
-        p {
-            color: #666666;
-            font-size: 1.1rem;
+        .tag {
+            background-color: #e43f5a; /* 포인트 컬러 (레드 핑크) */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 25px;
+        }
+
+        .info-section {
+            text-align: left;
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            color: #00c6ff; /* 강조색 */
+            font-weight: bold;
+            width: 90px;
+            display: inline-block;
+        }
+
+        /* 5. 하단 응원 문구 */
+        .footer-text {
+            color: #8a99ad;
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>박재혁입니다. 테스트2</h1>
-        <p>반갑습니다! CSS를 활용해 웹 페이지를 꾸미는 중입니다. 🚀</p>
+    <div class="profile-card">
+        <!-- 상단 이니셜 아바타 -->
+        <div class="avatar">JH</div>
+        
+        <!-- 이름 및 태그 -->
+        <h1>박재혁</h1>
+        <span class="tag">Future Mobility Engineer</span>
+        
+        <!-- 내 정보 상세 박스 -->
+        <div class="info-section">
+            <div class="info-item">
+                <span class="label">소속</span>
+                <span>공주대학교</span>
+            </div>
+            <div class="info-item">
+                <span class="label">학과</span>
+                <span>지능형모빌리티공학과</span>
+            </div>
+            <div class="info-item">
+                <span class="label">학년</span>
+                <span>3학년 (재학 중)</span>
+            </div>
+        </div>
+        <!-- 하단 메시지 -->
+        <p class="footer-text">
+            미래 모빌리티 기술을 연구하고 <br>
+            코딩하는 웹 페이지 공간입니다. 🚀
+        </p>
     </div>
 
 </body>
