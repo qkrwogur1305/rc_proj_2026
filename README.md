@@ -30,3 +30,14 @@ git config --global user.email "내이메일@example.com"
 6교시: list메소드, for 문
 7교시: dictionary
 8교시: webview만들기
+
+2026-06-24
+
+1교시: while loop
+2교시: 사전 평가 시험
+3교시: 함수 작성, type hint, doc string, return
+4교시: 인자, 포지셔널 인자, 가변 인자, 디폴트 인자
+5교시: 회귀함수, 람다 함수, map, filter
+6교시: file 읽기 쓰기, open, with open
+7교시: generator, decorator, closure
+8교시: time_decorator
